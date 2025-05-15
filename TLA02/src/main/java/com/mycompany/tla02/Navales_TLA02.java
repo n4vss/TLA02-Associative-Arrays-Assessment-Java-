@@ -7,7 +7,6 @@ public class Navales_TLA02 {
     public static void main(String[] args) {
         HashMap<String, Integer> student = new HashMap<>();
 
-        // Initializing student scores
         student.put("John", 85);
         student.put("Alice", 90);
         student.put("Mark", 78);
@@ -32,14 +31,14 @@ public class Navales_TLA02 {
 
         if (student.containsKey(updateName)) {
             System.out.print("Enter the new score: ");
-            if (sc.hasNextInt()) { // Validate input
+            if (sc.hasNextInt()) { 
                 int newScore = sc.nextInt();
                 student.put(updateName, newScore);
                 System.out.println(updateName + "'s score updated successfully!");
-                sc.nextLine(); // Consume leftover newline
+                sc.nextLine(); 
             } else {
                 System.out.println("Invalid score input.");
-                sc.nextLine(); // Consume invalid input
+                sc.nextLine();
             }
         } else {
             System.out.println("Student not found.");
